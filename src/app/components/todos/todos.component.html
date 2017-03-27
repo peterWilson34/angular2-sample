@@ -1,0 +1,26 @@
+
+<div class="row pt-2">
+    <div class="col-sm-6">
+      <h2>Completed</h2>
+      <div class="card mb-2" *ngFor='let todo of todos | filter : "status": "completed"'>
+
+         <div class="card-block ">
+           <p>{{todo.title}}</p>
+           <p>{{todo.description}}</p>
+         </div>
+
+      </div>
+
+    </div>
+    <div class="col-sm-6">
+      <h2>Not Completed</h2>
+      <div class="card mb-2" *ngFor='let todo of todos | filter : "status": "notcompleted"'>
+
+         <div class="card-block ">
+           <p>{{todo.title}}</p>
+           <p>{{todo.description}}</p>
+         </div>
+
+      </div>
+    </div>
+</div>
